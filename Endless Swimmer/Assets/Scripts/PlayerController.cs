@@ -12,14 +12,19 @@ public class PlayerController : MonoBehaviour {
     public float maxHeight;
     public float minHeight;
 
+    public int health = 3;
+
+    private bool press = false;
+
    
     void Start () {
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
+        if (press) {
+            transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
+        }
         
             buttonUp.onClick.RemoveAllListeners();
             buttonUp.onClick.AddListener(() => PlayerUp());
@@ -38,6 +43,7 @@ public class PlayerController : MonoBehaviour {
         if (transform.position.y < maxHeight)
         {
             newPos = new Vector2(transform.position.x, transform.position.y + Yvalue);
+            press = true;
         }
         
     }
@@ -47,6 +53,7 @@ public class PlayerController : MonoBehaviour {
         if (transform.position.y > minHeight)
         {
             newPos = new Vector2(transform.position.x, transform.position.y - Yvalue);
+            press = true;
         }
     }
 }
