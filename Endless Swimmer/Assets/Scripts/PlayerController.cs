@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
     public Button buttonUp;
@@ -22,6 +23,12 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(health <= 0)
+        {
+            //restart
+            //need to make a game over scene
+            SceneManager.LoadScene("GameOver");
+        }
         if (press) {
             transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
         }
