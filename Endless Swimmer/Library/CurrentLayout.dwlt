@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -353,18 +353,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Jessy\Documents\GitHub\MobileEndless\Endless Swimmer
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3a250000
-    m_LastClickedID: 9530
+    m_SelectedIDs: f4240000
+    m_LastClickedID: 9460
     m_ExpandedIDs: 00000000ac24000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ba5afeff9077feffcc78feff7483feffce10ffff8412ffffac13ffff1c16ffff4417ffff4018ffff8a49fffff883ffffd8fbffff000000006a25000074250000da270000e6270000fc270000562a0000e42b00002a2c0000122d0000422d00004c2d0000582d0000
+    m_ExpandedIDs: a2f0fdffa4f1fdffd8fbffff00000000a8250000b6250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -561,14 +561,14 @@ MonoBehaviour:
     width: 804
     height: 324
   m_SceneLighting: 1
-  lastFramingTime: 302.27291804196454
+  lastFramingTime: 4288.050530097155
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 581.97595, y: 118.08607, z: 0}
+    m_Target: {x: 26.481455, y: -7.7058725, z: 0}
     speed: 2
-    m_Value: {x: 581.97595, y: 118.08607, z: 0}
+    m_Value: {x: 26.481455, y: -7.7058725, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -595,9 +595,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 536.68616
+    m_Target: 46.53225
     speed: 2
-    m_Value: 536.68616
+    m_Value: 46.53225
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -654,7 +654,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1

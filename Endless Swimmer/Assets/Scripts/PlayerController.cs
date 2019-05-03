@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour {
 
     private bool press = false;
 
+    public GameObject bubbles;
+
    
     void Start () {
 	}
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour {
         //Debug.Log("2Y value is " + transform.position.y + " - and max is " + maxHeight);
         if (transform.position.y < maxHeight)
         {
+            Instantiate(bubbles, transform.position, Quaternion.identity);
             newPos = new Vector2(transform.position.x, transform.position.y + Yvalue);
             press = true;
         }
@@ -59,6 +62,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (transform.position.y > minHeight)
         {
+            Instantiate(bubbles, transform.position, Quaternion.identity);
             newPos = new Vector2(transform.position.x, transform.position.y - Yvalue);
             press = true;
         }

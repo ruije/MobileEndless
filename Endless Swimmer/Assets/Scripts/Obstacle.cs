@@ -7,6 +7,8 @@ public class Obstacle : MonoBehaviour {
     public int damage = 1;
     public float speed;
 
+    public GameObject bubbles;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -21,7 +23,7 @@ public class Obstacle : MonoBehaviour {
     {
         if(collision.CompareTag("Player"))
         {
-            //player takes damage (or death?)
+            Instantiate(bubbles, transform.position, Quaternion.identity);
             collision.GetComponent<PlayerController>().health -= damage;
             Destroy(gameObject);
         }
