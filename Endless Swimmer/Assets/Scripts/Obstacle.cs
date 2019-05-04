@@ -8,9 +8,10 @@ public class Obstacle : MonoBehaviour {
     public float speed;
 
     public GameObject bubbles;
+    public GameObject sound;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -23,6 +24,7 @@ public class Obstacle : MonoBehaviour {
     {
         if(collision.CompareTag("Player"))
         {
+            Instantiate(sound, transform.position, Quaternion.identity);
             Instantiate(bubbles, transform.position, Quaternion.identity);
             collision.GetComponent<PlayerController>().health -= damage;
             Destroy(gameObject);

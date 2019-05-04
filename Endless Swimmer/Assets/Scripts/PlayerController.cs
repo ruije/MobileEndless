@@ -16,8 +16,15 @@ public class PlayerController : MonoBehaviour {
     public int health = 3;
 
     private bool press = false;
+    //prevents bubbles and sound looping
+    //while the load delay happens
+    private bool animOnce = true;
+
+    public Text timr;
+    public Text healthiness;
 
     public GameObject bubbles;
+    public GameObject sound;
 
    
     void Start () {
@@ -25,16 +32,29 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(health <= 0)
+        int now = (int)Time.time;
+        timr.text = now.ToString();
+        healthiness.text = "HP: " + health.ToString();
+        if (health == 0 && animOnce)
         {
+            SpriteRenderer rend = this.gameObject.GetComponent<SpriteRenderer>();
+            rend.enabled = false;
+            Instantiate(bubbles, transform.position, Quaternion.identity);
+            Instantiate(sound, transform.position, Quaternion.identity);
+            //} else if (health <= 0)
+            //{
             //restart
             //need to make a game over scene
-            SceneManager.LoadScene("GameOver");
+            animOnce = false;
+            StartCoroutine(ExecuteAfterTime(0.5f));
         }
+        
+        //this is just to stop the player from lurching forward
         if (press) {
             transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
         }
         
+        //ignores if statements here - don't know why
             buttonUp.onClick.RemoveAllListeners();
             buttonUp.onClick.AddListener(() => PlayerUp());
         
@@ -53,6 +73,7 @@ public class PlayerController : MonoBehaviour {
         {
             Instantiate(bubbles, transform.position, Quaternion.identity);
             newPos = new Vector2(transform.position.x, transform.position.y + Yvalue);
+            Instantiate(sound, transform.position, Quaternion.identity);
             press = true;
         }
         
@@ -64,7 +85,14 @@ public class PlayerController : MonoBehaviour {
         {
             Instantiate(bubbles, transform.position, Quaternion.identity);
             newPos = new Vector2(transform.position.x, transform.position.y - Yvalue);
+            Instantiate(sound, transform.position, Quaternion.identity);
             press = true;
         }
+    }
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("GameOver");
     }
 }
