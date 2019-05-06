@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 68
+  controlID: 109
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,8 +252,8 @@ MonoBehaviour:
     y: 0
     width: 796
     height: 343
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -353,18 +353,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Jessy\Documents\GitHub\MobileEndless\Endless Swimmer
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 18}
-    m_SelectedIDs: 46250000
-    m_LastClickedID: 9542
+    m_SelectedIDs: 8c250000
+    m_LastClickedID: 9612
     m_ExpandedIDs: 00000000b024000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -509,28 +509,28 @@ MonoBehaviour:
     height: 322
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 30250000
-    m_LastClickedID: 0
-    m_ExpandedIDs: d8fbffff000000004e260000
+    m_SelectedIDs: 28490000
+    m_LastClickedID: 18728
+    m_ExpandedIDs: 020ffcffa819feffc498feffbe6affff1681ffff6ca6ffff9ab8ffff5cbaffffbaceffffd8fbffff000000005a2d000078370000dc370000003800001e380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Text
+      m_OriginalName: Text
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -39840
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - MainScene
+  - GameOver
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -561,14 +561,14 @@ MonoBehaviour:
     width: 792
     height: 322
   m_SceneLighting: 1
-  lastFramingTime: 26727.71506269026
+  lastFramingTime: 3098.8178233526787
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.91, y: 0.11, z: 0}
+    m_Target: {x: 69, y: 76.25, z: 0}
     speed: 2
-    m_Value: {x: -4.91, y: 0.11, z: 0}
+    m_Value: {x: 69, y: 76.25, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -595,9 +595,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 21.207102
+    m_Target: 640.7593
     speed: 2
-    m_Value: 21.207102
+    m_Value: 640.7593
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -642,8 +642,8 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -396
-    m_HBaseRangeMax: 396
+    m_HBaseRangeMin: -271.1111
+    m_HBaseRangeMax: 271.1111
     m_VBaseRangeMin: -152.5
     m_VBaseRangeMax: 152.5
     m_HAllowExceedBaseRangeMin: 1
@@ -707,6 +707,6 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 8
-    y: 445
-    width: 1071
-    height: 253
+    y: 443
+    width: 1068
+    height: 255

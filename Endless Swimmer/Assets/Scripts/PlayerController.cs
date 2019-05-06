@@ -22,19 +22,28 @@ public class PlayerController : MonoBehaviour {
 
     public Text timr;
     public Text healthiness;
+    public Text highTime;
 
     public GameObject bubbles;
     public GameObject sound;
 
    
     void Start () {
+        int sc = PlayerPrefs.GetInt("High Score", 0);
+        highTime.text = "max: " + sc.ToString();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        int now = (int)Time.time;
+        int now = (int)Time.timeSinceLevelLoad;
         timr.text = now.ToString();
         healthiness.text = "HP: " + health.ToString();
+        if (now > PlayerPrefs.GetInt("High Score", 0))
+        {
+            PlayerPrefs.SetInt("High Score", now);
+            int sc = PlayerPrefs.GetInt("High Score", 0);
+            highTime.text = "max: " + sc.ToString();
+        }
         if (health == 0 && animOnce)
         {
             SpriteRenderer rend = this.gameObject.GetComponent<SpriteRenderer>();
